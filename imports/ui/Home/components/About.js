@@ -74,7 +74,7 @@ const texts = {
             title: "Un réseau", 
             icon: "/images/about/reseau.svg",
             description: `Nous sommes avant tout un réseau de développeurs 
-            et d'entrepreneurs réunit autour des nouvelles technologies du 
+            et d'entrepreneurs réunis autour des nouvelles technologies du 
             JavaScript. Le point central que nous sommes permet a ces deux 
             mondes d'échanger leurs connaissances.`
         },
