@@ -1,0 +1,57 @@
+{
+  "name": "boilerplate-meteor",
+  "private": true,
+  "scripts": {
+    "start": "meteor --settings settings.json",
+    "start-mobile": "meteor run android-device --settings settings.json",
+    "start-mongo": "export MONGO_URL=mongodb://localhost:27017/jsandco && meteor --settings settings-dev.json",
+    "start-prod": "meteor --settings settings-dev.json --production"
+  },
+  "dependencies": {
+    "1-liners": "^0.4.0",
+    "@babel/core": "^7.0.0-beta.42",
+    "@babel/polyfill": "^7.0.0-beta.42",
+    "@babel/preset-env": "^7.0.0-beta.42",
+    "@babel/preset-react": "^7.0.0-beta.42",
+    "@babel/preset-stage-2": "^7.0.0-beta.42",
+    "@babel/runtime": "^7.0.0-beta.42",
+    "autoprefixer": "^6.3.1",
+    "babel-preset-meteor": "^7.0.0-beta.42",
+    "bcrypt": "^1.0.3",
+    "loadable-components": "^0.4.0",
+    "meteor-node-stubs": "^0.3.2",
+    "meteor-redux-middlewares": "^3.0.6",
+    "moment": "^2.19.1",
+    "node-cache": "^4.1.1",
+    "node-s3-public-url": "^1.0.2",
+    "react": "^16.2.0",
+    "react-animations": "^1.0.0",
+    "react-dom": "^16.2.0",
+    "react-hammerjs": "^1.0.1",
+    "react-helmet": "^5.2.0",
+    "react-motion": "^0.5.2",
+    "react-redux": "^5.0.6",
+    "react-reveal": "^1.2.1",
+    "react-reveal-text": "^0.1.1",
+    "react-router-dom": "^4.2.2",
+    "react-toastify": "^3.2.2",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "semantic-ui-react": "^0.75.1",
+    "styled-components": "^3.2.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.2"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "browsers": [
+          "last 2 versions"
+        ]
+      }
+    }
+  }
+}
