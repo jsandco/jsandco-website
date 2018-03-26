@@ -41,6 +41,7 @@ const ContactsWrapper = styled.div`
         color: ${colors.main.black};
     }
     .single-item {
+        cursor: pointer;
         .sub {
             text-align: justify !important;
         }
@@ -50,7 +51,7 @@ const ContactsWrapper = styled.div`
 const SingleItem = ({ item, index }) => (
     <Grid.Column computer={5} tablet={8} mobile={13} className="single-item">
     <Fade left={index === 0} right={index === 2}>
-            <Header as='h2' icon textAlign='center'>
+            <Header as='h2' icon textAlign='center' onClick={() => window.open(item.link)}>
                 <Image src={item.icon} />
                 <Header.Content>
                     {item.title}
@@ -70,28 +71,26 @@ const texts = {
     </div>,
     items: [
         {
-            title: "Facebook", 
-            icon: "/social/facebook.svg",
-            description: `Kickstarter paleo shoreditch, narwhal gochujang 
-            hammock hella iceland chartreuse skateboard 90's. 
-            Retro photo booth slow-carb trust fund salvia. 
-            Neutra cronut celiac bespoke mlkshk organic`
-        },
-        {
             title: "Meetup", 
             icon: "/social/meetup.svg",
-            description: `Kickstarter paleo shoreditch, narwhal gochujang 
-            hammock hella iceland chartreuse skateboard 90's. 
-            Retro photo booth slow-carb trust fund salvia. 
-            Neutra cronut celiac bespoke mlkshk organic`
+            link: "https://www.meetup.com/fr-FR/JavaScript-and-Co",
+            description: `Du lighting talk au hackaton, en passant par la formation ou le retour d'expérience.
+            Nous organisons de nombreux évènements tout au long de l'année sur des sujets variés autour du web.`
         },
         {
             title: "Github", 
             icon: "/social/github.svg",
-            description: `Kickstarter paleo shoreditch, narwhal gochujang 
-            hammock hella iceland chartreuse skateboard 90's. 
-            Retro photo booth slow-carb trust fund salvia. 
-            Neutra cronut celiac bespoke mlkshk organic`
+            link: "https://github.com/jsandco",
+            description: `Notre compte Github contient nos packages mis en communs,
+            le code de ce site internet mais également certains boilerplates en javascript.
+            Nos cours et formations seront aussi mis a disposition dans cet espace commun.`
+        },
+        {
+            title: "Facebook", 
+            icon: "/social/facebook.svg",
+            lin: "https://www.facebook.com/js.and.co.association/",
+            description: `Rejoignez nous sur facebook, nous partageons les évènements sur notre page.
+            Mais également des articles intéressants sur le développement web et l'entreprenariat.`
         },
     ]
 }

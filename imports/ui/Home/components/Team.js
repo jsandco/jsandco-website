@@ -127,8 +127,8 @@ const texts = {
             picture: "/team/jerome.jpg",
         },
         {
-            name: "Léo SEMIRAMOTH",
-            picture: "https://placeimg.com/180/180/any"
+            name: "Léa SEMIRAMOTH",
+            picture: "/team/lea.jpg",
         },
         {
             name: "Quentin CRAISSAC",
