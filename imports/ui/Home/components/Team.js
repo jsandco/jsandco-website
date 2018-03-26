@@ -79,7 +79,7 @@ const SingleItem = ({ item, index, isMobile }) => (
 )
 
 const SingleSmallItem = ({ item, index, isMobile }) => (
-    <Grid.Column computer={3} tablet={3} mobile={13} className="single-small-item">
+    <Grid.Column computer={4} tablet={4} mobile={13} className="single-small-item">
     <Fade up>
         <Image src={item.picture} size={isMobile ? "small" : null } centered />
             <Header as='h5' icon textAlign='center'>
@@ -108,7 +108,7 @@ const texts = {
             description: "Secrétaire"
         },
         {
-            title: "Tibault LEFORT", 
+            title: "Thibaut LEFORT", 
             icon: "/office/thibault.jpg",
             description: "Trésorier"
         },
@@ -133,6 +133,10 @@ const texts = {
         {
             name: "Quentin CRAISSAC",
             picture: "/team/quentin.jpg",
+        },
+        {
+            name: "Florian BELLAZOUZ",
+            picture: "/team/florian.jpg",
         },
     ]
 }

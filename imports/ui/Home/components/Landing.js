@@ -33,35 +33,37 @@ class Landing extends Component {
         const { loading } = this.state;
         const { isMobile } = this.props;
         return(
-        <LandingWrapper mounted={!loading} isMobile={isMobile}>
-            <Grid centered>
-                <Grid.Column width={16}>
-                    <Header as="h1" textAlign="center">
-                        <span className="wrapper">
-                            <div className="first left" >J</div>
-                            <div className="second left" >S</div>
-                            <div className="middle" >&</div>
-                            <div className="second right" >C</div>
-                            <div className="first right" >o</div>
-                        </span>
-                        <Header.Subheader>
-                            Association 1901
-                        </Header.Subheader>
-                    </Header>
-                </Grid.Column>
-                <Grid.Column computer={5} tablet={8} mobile={12} >
-                    <Header as="h3" textAlign="center" className="first">
-                        <ReactRevealText show={!loading} >VULGARISATION</ReactRevealText>
-                    </Header>
-                    <Header as="h3" textAlign="center" className="second">
-                        <ReactRevealText show={!loading} >DIFFUSION</ReactRevealText>
-                    </Header>
-                    <Header as="h3" textAlign="center" className="third">
-                        <ReactRevealText show={!loading} >FORMATION</ReactRevealText>
-                    </Header>
-                </Grid.Column>
-            </Grid>
-        </LandingWrapper>
+        <div itemScope itemType="http://schema.org/Organization">
+            <LandingWrapper mounted={!loading} isMobile={isMobile}>
+                <Grid centered>
+                    <Grid.Column width={16}>
+                        <Header as="h1" textAlign="center" itemProp="name" >
+                            <span className="wrapper">
+                                <div className="first left" >J</div>
+                                <div className="second left" >S</div>
+                                <div className="middle" >&</div>
+                                <div className="second right" >C</div>
+                                <div className="first right" >o</div>
+                            </span>
+                            <Header.Subheader>
+                                Association 1901
+                            </Header.Subheader>
+                        </Header>
+                    </Grid.Column>
+                    <Grid.Column computer={5} tablet={8} mobile={12} >
+                        <Header as="h3" textAlign="center" className="first">
+                            <ReactRevealText show={!loading} >VULGARISATION</ReactRevealText>
+                        </Header>
+                        <Header as="h3" textAlign="center" className="second">
+                            <ReactRevealText show={!loading} >DIFFUSION</ReactRevealText>
+                        </Header>
+                        <Header as="h3" textAlign="center" className="third">
+                            <ReactRevealText show={!loading} >FORMATION</ReactRevealText>
+                        </Header>
+                    </Grid.Column>
+                </Grid>
+            </LandingWrapper>
+        </div>
         )
     }
 }
