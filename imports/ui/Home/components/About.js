@@ -81,7 +81,7 @@ const texts = {
         {
             title: "Une expertise", 
             icon: "/images/about/expert.svg",
-            description: `Développment, expérience utilisateur, design,
+            description: `Développement, expérience utilisateur, design,
             graphisme et business autour du web. Nos membres et notre 
             environnement réunit des experts autour de Toulouse ayant
             de multiples compétences à partager.`
