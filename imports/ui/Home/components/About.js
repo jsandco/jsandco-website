@@ -81,10 +81,10 @@ const texts = {
         {
             title: "Une expertise", 
             icon: "/images/about/expert.svg",
-            description: `Développmet, expériences utilisateur, design,
+            description: `Développment, expérience utilisateur, design,
             graphisme et business autour du web. Nos membres et notre 
             environnement réunit des experts autour de Toulouse ayant
-            de multiples compétences a partager.`
+            de multiples compétences à partager.`
         },
         {
             title: "Des entrepreneurs", 
@@ -106,7 +106,7 @@ const texts = {
             title: "Des formations", 
             icon: "/images/about/formation.svg",
             description: `Notre gros projet est de faire des formations d'initiation 
-            pour les débutants ou d'amélioration pour les plus aguerris afin de répandre 
+            pour les débutants ou d'amélioration pour les plus aguerris. Ceci afin de répandre 
             l'utilisation du JavaScript de façon ludique et le moins cher possible.`
         },
         {
