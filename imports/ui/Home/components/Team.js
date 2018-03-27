@@ -56,6 +56,9 @@ const TeamWrapper = styled.div`
             border: 4px solid ${colors.main.yellow};
             margin-bottom: 12px;
         }
+        img {
+            filter: grayscale(100%);
+        }
         .sub {
             color: #f8f8f8 !important;
         }
@@ -65,7 +68,7 @@ const TeamWrapper = styled.div`
 const SingleItem = ({ item, index, isMobile }) => (
     <Grid.Column computer={5} tablet={5} mobile={13} className="single-item">
     <Fade left={index === 0} right={index === 2}>
-        <Image src={item.icon} size={isMobile ? "small" : null } centered />
+        <Image wrapped src={item.icon} size={isMobile ? "small" : null } centered />
             <Header as='h3' icon textAlign='center'>
                 <Header.Content>
                     {item.title}
@@ -81,7 +84,7 @@ const SingleItem = ({ item, index, isMobile }) => (
 const SingleSmallItem = ({ item, index, isMobile }) => (
     <Grid.Column computer={3} tablet={3} mobile={13} className="single-small-item">
     <Fade up>
-        <Image src={item.picture} size={isMobile ? "small" : null } centered />
+        <Image wrapped src={item.picture} size={isMobile ? "small" : null } centered />
             <Header as='h5' icon textAlign='center'>
                 <Header.Content>
                     {item.name}

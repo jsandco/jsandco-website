@@ -67,7 +67,7 @@ const SingleItem = ({ item, index }) => (
 const texts = {
     title: "Où sommes nous ?",
     subtitle: <div>
-        Toulouse est notre coeur<br/>La cantine notre QG pour la plupart<br/>Le web notre repaire pour tous.
+        Toulouse est notre coeur.<br/>La Cantine notre QG pour la plupart.<br/>Le web notre repaire pour tous.
     </div>,
     items: [
         {

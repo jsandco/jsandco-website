@@ -6,6 +6,7 @@ import Landing from "./components/Landing";
 import About from "./components/About";
 import Team from "./components/Team";
 import Contacts from "./components/Contacts";
+import Partners from "./components/Partners";
 
 const Home = (props) => (
   <React.Fragment>
@@ -13,6 +14,7 @@ const Home = (props) => (
     <About {...props} />
     <Team {...props} />
     <Contacts {...props} />
+    <Partners {...props} />
   </React.Fragment>
 )
 

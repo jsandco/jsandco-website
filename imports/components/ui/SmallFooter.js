@@ -14,7 +14,7 @@ const SmallFooter = ({ isMobile }) => (
           <Menu.Item position="right" >
                 Developped and designed by <a href="https://mexar.fr" rel="noopener noreferrer" target="_blank" > MeXaR</a>
           </Menu.Item>
-          <Menu.Item position="right" >
+          {/* <Menu.Item position="right" >
                 Hosted by
             <Image
               src="/divers/txm_logo.png"
@@ -24,7 +24,7 @@ const SmallFooter = ({ isMobile }) => (
               href="https://techexmachina.com/"
               target="_blank"
             />
-          </Menu.Item>
+          </Menu.Item> */}
         </Container>
       </Menu>
     </FooterWrapper>
@@ -39,6 +39,7 @@ margin-top:0px;
 >.ui.menu {
     background-color: ${colors.main.black} !important;
     border-radius: 0px !important;
+    border-top: 4px solid ${colors.main.yellow};
     .item {
         color: ${colors.main.yellow} !important;
         padding: ${({ isMobile }) => isMobile ? null : '3px !important'};
