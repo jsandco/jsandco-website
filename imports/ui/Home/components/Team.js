@@ -51,7 +51,7 @@ const TeamWrapper = styled.div`
             color: #f8f8f8 !important;
         }
     }
-    .single-item, .single-small-item {
+    .single-item-team, .single-small-item-team {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
@@ -70,7 +70,7 @@ const TeamWrapper = styled.div`
 `;
 
 const SingleItem = ({ item, index, isMobile }) => (
-    <Grid.Column computer={5} tablet={5} mobile={13} className="single-item">
+    <Grid.Column computer={5} tablet={5} mobile={13} className="single-item-team">
     <Fade left={index === 0} right={index === 2}>
         <Image wrapped src={item.icon} size={isMobile ? "small" : null } centered />
             <Header as='h3' icon textAlign='center'>
@@ -86,7 +86,7 @@ const SingleItem = ({ item, index, isMobile }) => (
 )
 
 const SingleSmallItem = ({ item, index, isMobile }) => (
-    <Grid.Column computer={3} tablet={3} mobile={13} className="single-small-item">
+    <Grid.Column computer={3} tablet={3} mobile={13} className="single-small-item-team">
     <Fade up>
         <Image wrapped src={item.picture} size={isMobile ? "small" : null } centered />
             <Header as='h5' icon textAlign='center'>
