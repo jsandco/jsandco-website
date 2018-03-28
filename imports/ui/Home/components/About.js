@@ -83,7 +83,7 @@ const texts = {
             icon: "/images/about/expert.svg",
             description: `Développement, expérience utilisateur, design,
             graphisme et business autour du web. Nos membres et notre 
-            environnement réunit des experts autour de Toulouse ayant
+            environnement réunissent des experts autour de Toulouse ayant
             de multiples compétences à partager.`
         },
         {
@@ -112,7 +112,7 @@ const texts = {
         {
             title: "Des évènements", 
             icon: "/images/about/screen.svg",
-            description: `Suite à la réussite CodeFest de 2017, nous avons pour 
+            description: `Suite à la réussite du CodeFest de 2017, nous avons pour 
             projet d'organiser un autre autre hackathon dans les prochains mois 
             et d'en faire une habitude. Lighting talk, retour d'expériences ou simple 
             rencontre autour d'un verre, tenez vous au courant sur Facebook ou Meetup.`

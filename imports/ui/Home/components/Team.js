@@ -52,6 +52,10 @@ const TeamWrapper = styled.div`
         }
     }
     .single-item, .single-small-item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
         .image {
             border: 4px solid ${colors.main.yellow};
             margin-bottom: 12px;

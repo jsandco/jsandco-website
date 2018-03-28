@@ -53,7 +53,7 @@ const PartnersWrapper = styled.div`
 `;
 
 const SingleItem = ({ item, index }) => (
-    <Grid.Column computer={3} tablet={3} mobile={8} className="single-item">
+    <Grid.Column computer={4} tablet={3} mobile={8} className="single-item">
         <Fade up>
         <Image src={item.icon} onClick={() => window.open(item.link)} />
             {/* <Header as='h2' icon textAlign='center'>
@@ -72,7 +72,7 @@ const texts = {
         {
             title: "La Mélée", 
             icon: "/partners/lamelee.png",
-            link: "http://wwww.lamelee.com"
+            link: "http://www.lamelee.com"
         },
         {
             title: "La Cantine", 
@@ -93,6 +93,11 @@ const texts = {
             title: "My OpenCity", 
             icon: "/partners/myopencity.png",
             link: "https://myopencity.io/"
+        },
+        {
+            title: "MeXaR", 
+            icon: "/partners/mexar.png",
+            link: "https://mexar.fr/"
         },
     ]
 }
