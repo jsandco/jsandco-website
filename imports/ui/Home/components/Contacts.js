@@ -88,7 +88,7 @@ const texts = {
         {
             title: "Facebook", 
             icon: "/social/facebook.svg",
-            lin: "https://www.facebook.com/js.and.co.association/",
+            link: "https://www.facebook.com/js.and.co.association/",
             description: `Rejoignez nous sur facebook, nous partageons les évènements sur notre page.
             Mais également des articles intéressants sur le développement web et l'entreprenariat.`
         },
