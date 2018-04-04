@@ -7,6 +7,7 @@ import About from "./components/About";
 import Team from "./components/Team";
 import Contacts from "./components/Contacts";
 import Partners from "./components/Partners";
+import JoinUs from "./components/JoinUs";
 
 const Home = (props) => (
   <React.Fragment>
@@ -15,6 +16,7 @@ const Home = (props) => (
     <Team {...props} />
     <Contacts {...props} />
     <Partners {...props} />
+    <JoinUs {...props} />
   </React.Fragment>
 )
 
