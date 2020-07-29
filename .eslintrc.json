@@ -19,5 +19,6 @@
         "react"
     ],
     "rules": {
+      "import/no-absolute-path": "off"
     }
 }

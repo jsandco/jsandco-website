@@ -4,8 +4,8 @@
   "scripts": {
     "start": "meteor run --exclude-archs web.browser.legacy",
     "test": "yarn lint",
-    "lint": "eslint --cache .",
-    "lint:fix": "eslint --cache --fix .",
+    "lint": "eslint --ext .js,.jsx --cache .",
+    "lint:fix": "eslint --ext .js,.jsx --cache --fix .",
     "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
   "dependencies": {
