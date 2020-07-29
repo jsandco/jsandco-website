@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import colors from '/imports/commons/colors';
 import {
   fadeIn,
@@ -28,13 +28,13 @@ const Wrapper = styled.div`
         }
     }
     h3.header.first {
-        animation: ${({ mounted }) => (mounted ? `1s ${fadeInUpAnimation}` : null)};
+        animation: ${({ mounted }) => (mounted ? css`1s ${fadeInUpAnimation}` : null)};
     }
     h3.header.second {
-        animation: ${({ mounted }) => (mounted ? `2s ${fadeInUpAnimation}` : null)};
+        animation: ${({ mounted }) => (mounted ? css`2s ${fadeInUpAnimation}` : null)};
     }
     h3.header.third {
-        animation: ${({ mounted }) => (mounted ? `3s ${fadeInUpAnimation}` : null)};
+        animation: ${({ mounted }) => (mounted ? css`3s ${fadeInUpAnimation}` : null)};
     }
     h1.header {
         margin-bottom: 0px;
