@@ -9,26 +9,36 @@
     "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
   "dependencies": {
+    "1-liners": "^0.4.2",
     "@babel/runtime": "^7.8.4",
+    "babel-eslint": "^10.1.0",
+    "eslint-import-resolver-meteor": "^0.4.0",
     "husky": "^4.2.5",
     "meteor-node-stubs": "^1.0.0",
     "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "react-animations": "^1.0.0",
+    "react-dom": "^16.13.0",
+    "react-hammerjs": "^1.0.1",
+    "react-motion": "^0.5.2",
+    "react-reveal": "^1.2.2",
+    "react-reveal-text": "^0.1.1",
+    "react-router-dom": "^5.2.0",
+    "react-toastify": "^6.0.8",
+    "semantic-ui-react": "^1.0.0",
+    "styled-components": "^5.1.1"
   },
   "meteor": {
     "mainModule": {
       "client": "client/main.jsx",
       "server": "server/main.js"
-    },
-    "testModule": "tests/main.js"
+    }
   },
   "devDependencies": {
     "eslint": "^7.5.0",
-    "eslint-config-standard": "^14.1.1",
+    "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.5",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint-plugin-react-hooks": "^4.0.8"
   }
 }
