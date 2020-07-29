@@ -1,0 +1,38 @@
+main {
+  padding-top: 70px;
+  padding-left: 210px;
+  padding-bottom: 50px;
+  .container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  main {
+    padding-left: 0px;
+  }
+}
+
+body, html {
+  background-color: #F7F7F7;
+}
+
+.alignLeft, .alignLeft *{
+  text-align: left !important;
+}
+.alignRight, .alignRight *{
+  text-align: right !important;
+}
+.alignCenter, .alignCenter *{
+  text-align: center !important;
+}
+.alignJustify, .alignJustify *{
+  text-align: justify !important;
+}
+.buttonMobile {
+  position: fixed;
+  z-index: 150;
+  top: 10px;
+  left: 10px;
+}
