@@ -10,6 +10,7 @@ Meteor.publish(null, function () {
         lastname: 1,
         photo: 1,
         role: 1,
+        isDisplayed: 1,
       },
       sort: { _id: 1 },
       limit: 1,

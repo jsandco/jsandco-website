@@ -6,14 +6,14 @@ import { ROLES } from '/imports/commons/enums';
 
 Meteor.methods({
   'users.updateProfile': function ({ user }) {
-    isConnected();
+    isConnected(this.userId);
 
     userCustomSchema.validate(user);
     Meteor.users.update(this.userId, { $set: user });
   },
 
   'users.updateEmail': function ({ email }) {
-    isConnected();
+    isConnected(this.userId);
 
     const user = Meteor.users.findOne(this.userId);
 
