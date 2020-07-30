@@ -10,16 +10,20 @@ const ModalMember = () => {
   return (
     <>
       <Fade up>
-        <Button className="js-yellow" fluid onClick={toggle}>Devenir Membre</Button>
+        <Button
+          onClick={toggle}
+          content="Devenir Membre"
+          className="js-button"
+        />
       </Fade>
       <Transition visible={isVisible} animation="fade">
-        <Modal open={isVisible}>
+        <Modal open={isVisible} onClose={toggle}>
           <Modal.Content>
             <iframe
               title="helloasso"
               id="haWidget"
               allowTransparency
-              src="https://www.helloasso.com/associations/js-co/adhesions/adhesion-a-js-co/widget"
+            // src={helloAssoLink}
               style={{ width: '100%', height: '70vh', border: 'none' }}
             />
           </Modal.Content>

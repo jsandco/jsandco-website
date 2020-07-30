@@ -1,9 +1,12 @@
 import React, { useState, useMemo, useEffect } from 'react';
+import Fade from 'react-reveal/Fade';
 import ReactRevealText from 'react-reveal-text';
-
-import { Grid, Header } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import { Grid, Header, Button } from 'semantic-ui-react';
 
 import Wrapper from './Wrapper';
+import ModalMember from './ModalMember';
+import Actions from './Actions';
 
 const Landing = () => {
   const [loading, setLoading] = useState(true);
@@ -43,6 +46,19 @@ const Landing = () => {
               <ReactRevealText show={!loading}>FORMATION</ReactRevealText>
             </Header>
           </Grid.Column>
+          <Grid.Row>
+            <Actions>
+              <ModalMember />
+              <Fade up>
+                <Button
+                  as={Link}
+                  to="/login"
+                  content="Déjà membre ? Connectez-vous !"
+                  className="js-button"
+                />
+              </Fade>
+            </Actions>
+          </Grid.Row>
         </Grid>
       </Wrapper>
     </div>
