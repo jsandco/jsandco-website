@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import colors from '/imports/commons/colors';
 
 const Actions = styled.div`
+  margin-top: 5em;
   display: flex;
 
  .js-button {
