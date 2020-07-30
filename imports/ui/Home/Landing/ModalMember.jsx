@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor';
 import React, { useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Modal, Button, Transition } from 'semantic-ui-react';
@@ -23,7 +24,7 @@ const ModalMember = () => {
               title="helloasso"
               id="haWidget"
               allowTransparency
-            // src={helloAssoLink}
+              src={Meteor.settings.public.hello_asso_url}
               style={{ width: '100%', height: '70vh', border: 'none' }}
             />
           </Modal.Content>

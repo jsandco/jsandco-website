@@ -11,41 +11,15 @@ const texts = {
   ),
   items: [
     {
-      title: 'Francois AUBEUT-GERVAISE',
-      icon: '/office/francois.jpg',
+      title: 'Babar ORHUM',
+      icon: '/office/.jpg',
       description: 'Président',
-    },
-    {
-      title: 'Jérémy SIMONKLEIN-ANGELY',
-      icon: '/office/jimmy.jpg',
-      description: 'Secrétaire',
-    },
-    {
-      title: 'Thibaut LEFORT',
-      icon: '/office/thibault.jpg',
-      description: 'Trésorier',
     },
   ],
   others: [
     {
-      name: 'David PANART',
-      picture: '/team/david.jpg',
-    },
-    {
-      name: 'Simon FAUX',
-      picture: '/team/simon.jpg',
-    },
-    {
-      name: 'Jérôme MOULY',
-      picture: '/team/jerome.jpg',
-    },
-    {
-      name: 'Léa SEMIRAMOTH',
-      picture: '/team/lea.jpg',
-    },
-    {
-      name: 'Florian BELLAZOUZ',
-      picture: '/team/florian.jpg',
+      name: 'Jhon DOE',
+      picture: '/team/.jpg',
     },
   ],
 };
