@@ -2,7 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import SimpleSchema from 'simpl-schema';
 import { ROLES } from '/imports/commons/enums';
 
-const userSchema = new SimpleSchema({
+const userNativeFields = {
   username: {
     type: String,
     optional: true,
@@ -28,17 +28,13 @@ const userSchema = new SimpleSchema({
     optional: true,
     blackbox: true,
   },
-  roles: {
-    type: Object,
-    optional: true,
-    blackbox: true,
-  },
   heartbeat: {
     type: Date,
     optional: true,
   },
+};
 
-  // CUSTOM FIELDS
+const userCustomFields = {
   firstname: {
     type: String,
     optional: true,
@@ -56,6 +52,15 @@ const userSchema = new SimpleSchema({
     allowedValues: Object.values(ROLES),
     optional: true,
   },
+};
+
+export const userNativeSchema = new SimpleSchema(userNativeFields);
+
+export const userCustomSchema = new SimpleSchema(userCustomFields);
+
+export const userSchema = new SimpleSchema({
+  ...userNativeFields,
+  ...userCustomFields,
 });
 
 Meteor.users.attachSchema(userSchema);
