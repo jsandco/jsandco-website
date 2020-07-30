@@ -49,7 +49,7 @@ const userCustomFields = {
   },
   role: {
     type: String,
-    allowedValues: Object.values(ROLES),
+    allowedValues: Object.keys(ROLES),
     optional: true,
   },
   isDisplayed: {

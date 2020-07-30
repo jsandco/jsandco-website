@@ -1,6 +1,9 @@
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 
+// Apply schema on user mongo collection
+import '/imports/api/users';
+
 const name = 'JS&Co';
 const email = '<contact@jsandco.fr>';
 const from = `${name} ${email}`;
