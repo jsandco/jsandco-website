@@ -1,9 +1,11 @@
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema from 'simpl-schema';
+import { ROLES } from '/imports/commons/enums';
 
 const userSchema = new SimpleSchema({
   username: {
     type: String,
+    optional: true,
   },
   emails: {
     type: Array,
@@ -33,6 +35,25 @@ const userSchema = new SimpleSchema({
   },
   heartbeat: {
     type: Date,
+    optional: true,
+  },
+
+  // CUSTOM FIELDS
+  firstname: {
+    type: String,
+    optional: true,
+  },
+  lastname: {
+    type: String,
+    optional: true,
+  },
+  photo: {
+    type: String,
+    optional: true,
+  },
+  role: {
+    type: String,
+    allowedValues: Object.values(ROLES),
     optional: true,
   },
 });
