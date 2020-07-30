@@ -52,6 +52,10 @@ const userCustomFields = {
     allowedValues: Object.values(ROLES),
     optional: true,
   },
+  isDisplayed: {
+    type: Boolean,
+    optional: true,
+  },
 };
 
 export const userNativeSchema = new SimpleSchema(userNativeFields);
