@@ -1,32 +1,48 @@
-import { Meteor }     from "meteor/meteor"
+import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 
-Accounts.onCreateUser(function (options, user) {
-  user.profile = options.profile
-  return user;
+// Apply schema on user mongo collection
+import '/imports/api/users';
+
+const name = 'JS&Co';
+const email = '<contact@jsandco.fr>';
+const from = `${name} ${email}`;
+
+Accounts.config({
+  forbidClientAccountCreation: true,
 });
 
+Accounts.emailTemplates.siteName = name;
+Accounts.emailTemplates.from = from;
 
-const name = 'Application Name';
-const email = '<support@application.com>';
-const from = `${name} ${email}`;
-const emailTemplates = Accounts.emailTemplates;
+// RESET PASSWORD
 
-emailTemplates.siteName = name;
-emailTemplates.from = from;
+Accounts.urls.resetPassword = (token) => Meteor.absoluteUrl(`missing/${token}`, { secure: true });
 
-emailTemplates.resetPassword = {
-  subject() {
-    return `[${name}] Reset Your Password`;
-  },
-  text(user, url) {
-    const userEmail = user.emails[0].address;
-    const urlWithoutHash = url.replace('#/', '');
+Accounts.emailTemplates.resetPassword = {
+  subject: () => `${name} - Nouveau mot de passe`,
+  text: (user, url) => `
+    Une demande de réinitialisation de mot de passe
+    a été demandée par le compte associé à l'adresse ${user.emails[0].address}.
+    \n\nPour définir un nouveau mot de passe, suivez le lien ci-dessous :
+    \n\n${url}\n\n
+    Si vous n'avez pas demandé à réinitialiser votre mot de passe, ne tenez pas compte de cet email.
+    \nSi vous n'êtes pas adhérent à ${name} et n'avez pas de compte sur notre plateforme, contactez-nous
+    au plus vite à cette adresse : ${email}.
+  `,
+};
 
-    return `A password reset has been requested for the account related to this
-    address (${userEmail}). To reset the password, visit the following link:
-    \n\n${urlWithoutHash}\n\n If you did not request this reset, please ignore
-    this email. If you feel something is wrong, please contact our support team:
-    ${email}.`;
-  },
+// ENROLLMENT EMAIL
+
+Accounts.urls.enrollAccount = (token) => Meteor.absoluteURL(`activate/${token}`, { secure: true });
+
+Accounts.emailTemplates.enrollAccount = {
+  subject: () => `Bienvenue chez ${name} !`,
+  text: (user, url) => `
+    Félicitation ! Vous êtes désormais adhérent chez JS&Co !!
+    \n\nVotre compte utilisateur vient d'être créé sur le site internet de l'association.
+    Pour activer ce compte, suivez sur le lien ci-dessous et choisissez un mot de passe.
+    \n\n${url}\n\n
+    Si vous n'avez pas pris d'adhésion à ${name}, contactez-nous au plus vite à cet adresse : ${email}.
+  `,
 };

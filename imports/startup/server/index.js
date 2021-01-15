@@ -1,4 +1,6 @@
-import "./api";
-import "./accounts-config";
-import "./slingshot";
-import "./router-server"
+import { Meteor } from 'meteor/meteor';
+import './accounts-config';
+import './api';
+
+Meteor.startup(() => {
+});

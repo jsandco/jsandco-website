@@ -1,2 +1,5 @@
 node_modules/
-settings-private.json
+.vscode
+.DS_Store
+.eslintcache
+settings.json
